@@ -3,7 +3,7 @@ extends RigidBody2D
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
 	
 func _input(event):
@@ -11,7 +11,7 @@ func _input(event):
 		if event.button_index == 1:
 			self.set_linear_velocity(Vector2(0, -150))
 			self.set_angular_velocity(-3)
-			$AnimatedSprite.play("Fly")
+			$AnimatedSprite2D.play("Fly")
 
 
 func _on_Area2D_body_entered(body):

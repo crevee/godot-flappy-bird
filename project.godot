@@ -6,12 +6,13 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
 config/name="Frappy Bird Tutorial"
 run/main_scene="res://World.tscn"
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
@@ -20,10 +21,10 @@ Global="*res://Global.gd"
 
 [display]
 
-window/size/width=216
-window/size/height=384
-window/size/test_width=432
-window/size/test_height=768
+window/size/viewport_width=216
+window/size/viewport_height=384
+window/size/window_width_override=432
+window/size/window_height_override=768
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -41,4 +42,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_environment="res://default_env.tres"
